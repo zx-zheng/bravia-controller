@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bravia-controller:
+    build:
+        context: ./
+        args:
+         - REPOSITORY=git://github.com/zx-zheng/bravia-controller.git
+    container_name: bravia-controller
+    env_file:
+      - conf.env
+    restart: always
